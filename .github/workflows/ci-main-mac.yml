@@ -6,6 +6,9 @@ on:
   pull_request:
     branches: [ main, 'release/**']
 
+env:
+  TEST_FILTER: coverage
+
 jobs:
   build:
     runs-on: macos-13 # TODO: This is a workaround until macos-14 is fixed: https://github.com/actions/runner-images/issues/10624
