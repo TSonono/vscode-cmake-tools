@@ -46,7 +46,8 @@ jobs:
           configure-options: -DCMAKE_INSTALL_PREFIX:STRING=${{ github.workspace }}/test/fakebin
           install-build: true
 
-      
+      - name: Setup LCOV
+        uses: hrishikesh-kadam/setup-lcov@v1
 
       - name: Run successful-build test
         run: yarn endToEndTestsSuccessfulBuild
