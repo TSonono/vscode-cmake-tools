@@ -43,6 +43,11 @@ jobs:
           configure-options: -DCMAKE_INSTALL_PREFIX:STRING=${{ github.workspace }}/test/fakebin
           install-build: true
 
+      - name: Install lcov
+        run: |
+          sudo apt-get update
+          sudo apt-get -y install lcov
+
       - name: Run backend tests
         run: yarn backendTests
 
